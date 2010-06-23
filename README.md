@@ -4,9 +4,9 @@
 
 1. [Download](http://github.com/newism/nsm.minify.ee_addon/zipball/master) the latest commit on the 'master' branch.
 2. Rename the file to nsm_minify
-3. Move to /system/expressionengine/thirdparty
-4. Move /system/expressionengine/thirdparty/nsm_minify/min to the public root of your site
-5. Edit /min/groupsConfig.php
+3. Move to `/system/expressionengine/thirdparty`
+4. Move `/system/expressionengine/thirdparty/nsm_minify/min` to the public root of your site
+5. Edit `/min/groupsConfig.php`
 
 ## Tag reference
 
