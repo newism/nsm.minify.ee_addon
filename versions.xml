@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:ee_addon="http://newism.com.au/nsm_addon_updater/#rss-xml">
+	<channel>
+		<title>NSM Minify Changelog</title>
+		<link>https://github.com/newism/nsm.minify.ee_addon/versions.xml</link>
+		<description>Most recent changes with links to updates.</description>
+		<item>
+			<title>Version 1.0.0B1</title>
+			<ee_addon:version>1.0.0B1</ee_addon:version>
+			<link>https://github.com/newism/nsm.minify.ee_addon//tree/1.0.0a1</link>
+			<pubDate>Wednesday, 23 Jun 2010 22:14:00 +1000</pubDate>
+			<description><![CDATA[
+				<ul>
+					<li>Initial release</li>
+				</ul>
+			]]>
+			</description>
+			<enclosure url="https://github.com/newism/nsm.minify.ee_addon/zipball/2.0.0a1" length="20367" type="application/zip" />
+		 </item>
+	</channel>
+</rss>
