@@ -28,8 +28,8 @@ return array(
 		'//templates/default_site/css/screen/typography.css',
 	
 	),
-		'js' => array(
-			'//templates/default_site/js/jquery.min.js',
-			'//templates/default_site/js/behaviours.js'
-		)
+	'js' => array(
+		'//templates/default_site/js/jquery.min.js',
+		'//templates/default_site/js/behaviours.js'
+	)
 );

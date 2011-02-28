@@ -1,18 +1,10 @@
 <?php
 /**
- * Configuration for default Minify application
+ * Configuration for "min", the default application built with the Minify
+ * library
+ * 
  * @package Minify
  */
-
-
-/**
- * In 'debug' mode, Minify can combine files with no minification and 
- * add comments to indicate line #s of the original files. 
- * 
- * To allow debugging, set this option to true and add "&debug=1" to 
- * a URI. E.g. /min/?f=script1.js,script2.js&debug=1
- */
-$min_allowDebugFlag = true;
 
 
 /**
@@ -20,7 +12,7 @@ $min_allowDebugFlag = true;
  * Set to false for no error logging (Minify may be slightly faster).
  * @link http://www.firephp.org/
  *
- * If you want to use a custom error logger, set this to your logger 
+ * If you want to use a custom error logger, set this to your logger
  * instance. Your object should have a method log(string $message).
  *
  * @todo cache system does not have error logging yet.
@@ -29,10 +21,25 @@ $min_errorLogger = false;
 
 
 /**
+ * To allow debugging, you must set this option to true.
+ *
+ * Once true, you can send the cookie minDebug to request debug mode output. The
+ * cookie value should match the URIs you'd like to debug. E.g. to debug
+ * /min/f=file1.js send the cookie minDebug=file1.js
+ * You can manually enable debugging by appending "&debug" to a URI.
+ * E.g. /min/?f=script1.js,script2.js&debug
+ * 
+ * In 'debug' mode, Minify combines files with no minification and adds comments
+ * to indicate line #s of the original files.
+ */
+$min_allowDebugFlag = false;
+
+
+/**
  * Allow use of the Minify URI Builder app. If you no longer need 
  * this, set to false.
  **/
-$min_enableBuilder = false;
+$min_enableBuilder = true;
 
 
 /**
@@ -40,7 +47,7 @@ $min_enableBuilder = false;
  * will have to load extra code to guess. Some examples below:
  */
 //$min_cachePath = 'c:\\WINDOWS\\Temp';
-$min_cachePath = '/tmp';
+//$min_cachePath = '/tmp';
 //$min_cachePath = preg_replace('/^\\d+;/', '', session_save_path());
 
 
@@ -55,7 +62,7 @@ $min_cachePath = '/tmp';
  * second line. The third line might work on some Apache servers.
  */
 $min_documentRoot = '';
-//$min_documentRoot = substr(__FILE__, 0, strlen(__FILE__) - 15);
+//$min_documentRoot = substr(__FILE__, 0, -15);
 //$min_documentRoot = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
 
 
@@ -78,9 +85,9 @@ $min_serveOptions['bubbleCssImports'] = false;
 
 
 /**
- * Maximum age of browser cache in seconds. After this period, the browser
- * will send another conditional GET. Use a longer period for lower traffic
- * but you may want to shorten this before making changes if it's crucial
+ * Cache-Control: max-age value sent to browser (in seconds). After this period,
+ * the browser will send another conditional GET. Use a longer period for lower
+ * traffic but you may want to shorten this before making changes if it's crucial
  * those changes are seen immediately.
  *
  * Note: Despite this setting, if you include a number at the end of the
@@ -105,10 +112,15 @@ $min_serveOptions['maxAge'] = 1800;
  */
 $min_serveOptions['minApp']['groupsOnly'] = false;
 
+
 /**
- * Maximum # of files that can be specified in the "f" GET parameter
+ * By default, Minify will not minify files with names containing .min or -min
+ * before the extension. E.g. myFile.min.js will not be processed by JSMin
+ * 
+ * To minify all files, set this option to null. You could also specify your
+ * own pattern that is matched against the filename.
  */
-$min_serveOptions['minApp']['maxFiles'] = 10;
+//$min_serveOptions['minApp']['noMinPattern'] = '@[-\\.]min\\.(?:js|css)$@i';
 
 
 /**
