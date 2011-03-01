@@ -15,11 +15,11 @@
 
 $plugin_info = array(
 	'pi_name' => 'NSM Minify',
-	'pi_version' => '1.0.0',
+	'pi_version' => '1.0.1',
 	'pi_author' => 'Leevi Graham',
 	'pi_author_url' => 'http://leevigraham.com/',
 	'pi_description' => 'Minify JS & CSS',
-	'pi_usage' => "http://expressionengine-addons.com/nsm-minify"
+	'pi_usage' => "http://ee-garage.com/nsm-minify"
 );
 
 set_include_path($_SERVER['DOCUMENT_ROOT'] . '/min/lib');
