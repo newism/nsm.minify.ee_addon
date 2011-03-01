@@ -17,5 +17,17 @@
 			</description>
 			<enclosure url="https://github.com/newism/nsm.minify.ee_addon/zipball/1.0.0B1" length="92745" type="application/zip" />
 		 </item>
+ 		<item>
+ 			<title>Version 1.0.0</title>
+ 			<ee_addon:version>1.0.0</ee_addon:version>
+ 			<link>https://github.com/newism/nsm.minify.ee_addon/</link>
+ 			<pubDate>Tuesday, 1 Mar 2011 10:25:00 +1000</pubDate>
+ 			<description><![CDATA[
+ 				<ul>
+ 					<li>Updated Minify to 2.1.4 Beta</li>
+ 				</ul>
+ 			]]>
+ 			</description>
+ 		 </item>
 	</channel>
 </rss>

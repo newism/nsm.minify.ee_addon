@@ -29,11 +29,31 @@ class Nsm_minify{
 
 	var $return_data = "";
 
-	function group_url()
+	/**
+	 * Minimizes files based on a group defined in min/groupsConfig.php
+	 *
+	 * @return string The minimized group files URL.
+	 */
+	public function group_url()
 	{
 		$EE = get_instance();
 		$group = $EE->TMPL->fetch_param('group');
-		$debug = ($EE->TMPL->fetch_param('debug') == 'yes') ? '&amp;debug=1' : FALSE;
-		return Minify_groupUri($group) . $debug;
+		$debug = $EE->TMPL->fetch_param('debug');
+		return Minify_getUri($group, array("debug" => $debug));
 	}
+
+	/**
+	 * Minimizes files
+	 *
+	 * @return string The minimized files URL.
+	 */
+	public function files_url()
+	{
+		$EE = get_instance();
+		$files = $EE->TMPL->fetch_param('files');
+		$files = explode(",",$files);
+		$debug = $EE->TMPL->fetch_param('debug');
+		return Minify_getUri($files, array("debug" => $debug));
+	}
+
 }
