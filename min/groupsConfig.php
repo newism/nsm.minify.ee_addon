@@ -10,6 +10,7 @@
  **/
 
 return array(
+	/* standard Newism files */
 	'css_screen' => array(
 		'//templates/default_site/css/screen/base.css',
 		'//templates/default_site/css/screen/layout.css',
@@ -31,5 +32,15 @@ return array(
 	'js' => array(
 		'//templates/default_site/js/jquery.min.js',
 		'//templates/default_site/js/behaviours.js'
+	),
+
+	/* Couple of groups for testing */
+	'test_css' => array(
+		'//themes/site_themes/default_site/nsm_minify/css/css1.css',
+		'//themes/site_themes/default_site/nsm_minify/css/css2.css',
+	),
+	'test_js' => array(
+		'//themes/site_themes/default_site/nsm_minify/js/js1.js',
+		'//themes/site_themes/default_site/nsm_minify/js/js2.js',
 	)
 );
